@@ -1,0 +1,137 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.5/schema.json
+cv:
+  name: Ravindra Singh
+  headline: Senior QA Engineer | Manual & Automation Testing | API Testing
+  location:
+  email: ravindrasingh.20148@gmail.com
+  photo:
+  phone: 7791033133
+  website:
+  social_networks:
+    - network: LinkedIn
+      username: ravindra-singh-5023b21a3
+  custom_connections:
+  sections:
+    summary:
+      - Manual QA Engineer with experience in Web and Mobile Application Testing, specializing in Functional, Regression, Smoke, Sanity, UAT, API, and Cross-Browser Testing. Skilled in Test Case Design, Test Execution, Defect Tracking, Requirement Analysis, and QA Documentation using Jira and TestRail.
+      - Hands-on experience in REST API Testing using Postman and basic automation testing using Selenium WebDriver. Strong knowledge of SDLC, STLC, Agile/Scrum, UI Testing, Database Testing, and Defect Lifecycle Management.
+      - Proven ability to identify critical defects, improve software quality, and support successful product releases.
+    experience:
+      - company: Umax Packaging Pvt. Ltd.
+        position: Senior QA Engineer
+        date:
+        start_date: 2024-10
+        end_date: 2026-02
+        location: Jodhpur
+        summary:
+        highlights:
+          - Performed Manual Testing for web and Android/iOS mobile applications using V-Model SDLC
+          - Created Test Plans, Maintained Test Plans, Test Strategies, Test Cases, and Test Scenarios based on business requirements and user stories
+          - Executed Smoke, Functional, Regression, Sanity, Integration, UAT, and Exploratory Testing
+          - Applied Risk-Based Testing approach to prioritize critical functionalities and improve release quality
+          - Managed complete defect lifecycle using Jira including bug logging, tracking, retesting, and verification
+          - Collaborated with Agile/Scrum teams in sprint planning, backlog grooming, stand-ups, and retrospectives
+          - Performed cross-browser, cross-platform, and mobile application testing for usability and UI validation
+          - Automated repetitive test cases using Selenium WebDriver, reducing manual effort by 20%
+          - Conducted requirement analysis, acceptance testing, and QA documentation maintenance
+      - company: Get Paz Solution Pvt. Ltd.
+        position: QA Engineer (Manual & API Testing)
+        date:
+        start_date: 2022-10
+        end_date: 2024-10
+        location: Bangalore
+        summary:
+        highlights:
+          - Created Test Plans, Test Cases, and Test Scenarios
+          - Performed Manual Testing, Functional, Regression, Smoke, Sanity, UAT, and End-to-End Testing
+          - Conducted API Testing using Postman for REST APIs
+          - Managed defect lifecycle using Jira, Bug Tracking
+          - Executed Agile sprint testing and regression validation
+          - Maintained test execution reports and QA documentation
+          - Participated in Sprint Planning, Stand-ups, and Agile ceremonies
+          - Prepared test scenarios, test data, and bug reports
+          - Performed usability and UI testing for web applications
+          - Created basic automation scripts using Selenium WebDriver
+          - Worked with TestNG for test execution
+      - company: Uma Polymers Limited
+        position: Quality Assurance Analyst
+        date:
+        start_date: 2020-06
+        end_date: 2022-09
+        location: Jodhpur
+        summary:
+        highlights:
+          - Performed Manual, Smoke, Functional, Regression, and API Testing using Postman
+          - Executed Performance and Load Testing to identify application bottlenecks
+          - Supported basic automation testing using Selenium WebDriver for regression test scenarios
+          - Created and executed Test Cases, Test Scenarios, and Test Plans
+          - Managed defect lifecycle including bug reporting, retesting, and closure
+          - Reduced pre-release defects by 30% through Regression and Exploratory Testing
+          - Performed Smoke and Performance Testing for iOS mobile applications
+          - Collaborated with developers to identify and resolve defects, reducing pre-release bugs by 20%
+    education:
+      - institution: G.D. Memorial College, Bikaner Technical University
+        area: Computer Applications
+        degree: Master of Computer Applications (MCA)
+        date: '2022'
+        start_date:
+        end_date:
+        location: Jodhpur
+        summary:
+        highlights: []
+      - institution: Jai Narain Vyas University (JNVU)
+        area: Computer Applications
+        degree: Bachelor of Computer Applications (BCA)
+        date: '2020'
+        start_date:
+        end_date:
+        location: Jodhpur
+        summary:
+        highlights: []
+    certifications:
+      - bullet: 'Manual and Automation Software Testing: SQUAD Infotech Pvt. Ltd., Mumbai'
+    skills:
+      - label: Testing Tools
+        details: Jira, TestRail, Bugzilla
+      - label: Manual Testing
+        details: Functional, Regression, Smoke, Sanity, UAT, Exploratory, Integration, System, End-to-End Testing
+      - label: API Testing
+        details: Postman, API Validation, Status Code Verification, SQL, Database Validation
+      - label: Automation Testing
+        details: Selenium WebDriver (Java), TestNG, Basic Script Writing
+      - label: Methodologies
+        details: Agile/Scrum, Waterfall, SDLC, STLC, Risk-Based Testing
+      - label: Documentation
+        details: Test Plans, Test Cases, Test Scenarios, Test Summary Reports
+      - label: Defect Management
+        details: Bug Reporting, Defect Tracking, Retesting, Defect Lifecycle
+      - label: Platforms
+        details: Web Applications, Android, iOS, Chrome, Firefox, Safari, Edge
+      - label: AI Tools
+        details: ChatGPT, GitHub Copilot, Google Gemini
+    key_achievements:
+      - bullet: Reduced pre-release defects by 20% at Uma Polymers through systematic and structured manual testing
+      - bullet: Achieved 100% RTM coverage ensuring all business requirements were tested before each release
+      - bullet: Streamlined defect triage process in Jira reducing average bug resolution time significantly
+      - bullet: Delivered high-quality test summary reports and KPI dashboards adopted as standard reporting format by the QA team
+      - bullet: Consistently maintained zero critical post-release defects across multiple product releases
+design:
+  theme: classic
+locale:
+  language: english
+settings:
+  current_date: '2025-12-22'
+  render_command:
+    design:
+    locale:
+    typst_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.pdf
+    markdown_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.md
+    html_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.html
+    png_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  bold_keywords: []
