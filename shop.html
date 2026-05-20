@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - VinayakVision | Premium Eyewear Collection</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation (same as index) -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-glasses"></i></span>
+                <span class="logo-text">Vinayak<span class="logo-accent">Vision</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link active">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="shop.html?cat=sunglasses"><i class="fas fa-sun"></i> Sunglasses</a>
+                        <a href="shop.html?cat=eyeglasses"><i class="fas fa-glasses"></i> Eyeglasses</a>
+                        <a href="shop.html?cat=computer"><i class="fas fa-desktop"></i> Computer Glasses</a>
+                        <a href="shop.html?cat=contact-lenses"><i class="fas fa-circle"></i> Contact Lenses</a>
+                        <a href="shop.html?cat=reading"><i class="fas fa-book-open"></i> Reading Glasses</a>
+                        <a href="shop.html?cat=sports"><i class="fas fa-running"></i> Sports Eyewear</a>
+                        <a href="shop.html?cat=kids"><i class="fas fa-child"></i> Kids Eyewear</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-btn search-toggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="nav-btn wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge wishlist-count">0</span>
+                </button>
+                <button class="nav-btn cart-btn" aria-label="Cart" onclick="openCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge cart-count">0</span>
+                </button>
+                <button class="nav-btn mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search sunglasses, eyeglasses, lenses..." autocomplete="off" />
+                <button class="search-close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 id="shopTitle">All Eyewear</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Shop</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3><i class="fas fa-sliders-h"></i> Filters</h3>
+                        <button class="btn-link" onclick="clearFilters()">Clear All</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="sunglasses" /> Sunglasses</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="eyeglasses" /> Eyeglasses</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="computer" /> Computer Glasses</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="contact-lenses" /> Contact Lenses</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="reading" /> Reading Glasses</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="sports" /> Sports Eyewear</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="kids" /> Kids Eyewear</label>
+                        <label class="filter-check"><input type="checkbox" name="cat" value="power-sunglasses" /> Power Sunglasses</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Gender</h4>
+                        <label class="filter-check"><input type="checkbox" name="gender" value="men" /> Men</label>
+                        <label class="filter-check"><input type="checkbox" name="gender" value="women" /> Women</label>
+                        <label class="filter-check"><input type="checkbox" name="gender" value="unisex" /> Unisex</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Frame Shape</h4>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="aviator" /> Aviator</label>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="wayfarer" /> Wayfarer</label>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="round" /> Round</label>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="rectangle" /> Rectangle</label>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="cat-eye" /> Cat Eye</label>
+                        <label class="filter-check"><input type="checkbox" name="shape" value="clubmaster" /> Clubmaster</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <label class="filter-check"><input type="radio" name="price" value="0-999" /> Under ₹999</label>
+                        <label class="filter-check"><input type="radio" name="price" value="1000-2999" /> ₹1,000 - ₹2,999</label>
+                        <label class="filter-check"><input type="radio" name="price" value="3000-5999" /> ₹3,000 - ₹5,999</label>
+                        <label class="filter-check"><input type="radio" name="price" value="6000-9999" /> ₹6,000 - ₹9,999</label>
+                        <label class="filter-check"><input type="radio" name="price" value="10000-99999" /> ₹10,000+</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Ray-Ban" /> Ray-Ban</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Oakley" /> Oakley</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Gucci" /> Gucci</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Fastrack" /> Fastrack</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Titan" /> Titan</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="John Jacobs" /> John Jacobs</label>
+                        <label class="filter-check"><input type="checkbox" name="brand" value="Vincent Chase" /> Vincent Chase</label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block filter-apply-btn" onclick="applyFilters()">Apply Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="shop-main">
+                    <div class="shop-toolbar">
+                        <div class="toolbar-left">
+                            <button class="filter-toggle-btn" onclick="toggleFilters()"><i class="fas fa-sliders-h"></i> Filters</button>
+                            <span class="results-count" id="resultsCount">Showing 0 products</span>
+                        </div>
+                        <div class="toolbar-right">
+                            <select id="sortSelect" onchange="applyFilters()">
+                                <option value="popular">Sort: Popular</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="rating">Best Rated</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                                <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="shopProducts">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="pagination" id="pagination"></div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-glasses"></i></span>
+                        <span class="logo-text">Vinayak<span class="logo-accent">Vision</span></span>
+                    </a>
+                    <p>Your trusted destination for premium eyewear.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="shop.html">Shop All</a>
+                    <a href="shop.html?cat=sunglasses">Sunglasses</a>
+                    <a href="shop.html?cat=eyeglasses">Eyeglasses</a>
+                    <a href="shop.html?cat=contact-lenses">Contact Lenses</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Track Order</a>
+                    <a href="#">Return Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Store</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Jodhpur, Rajasthan</p>
+                    <p><i class="fas fa-phone"></i> +91 7791033133</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 10AM - 9PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VinayakVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - VinayakVision | Visit Our Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-glasses"></i></span>
+                <span class="logo-text">Vinayak<span class="logo-accent">Vision</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-btn cart-btn" aria-label="Cart" onclick="openCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge cart-count">0</span>
+                </button>
+                <button class="nav-btn mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Visit our store or reach out to us anytime. We're here to help you find the perfect eyewear.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Store Address</h4>
+                                <p>VinayakVision Eyewear<br/>Jodhpur, Rajasthan, India</p>
+                                <a href="https://maps.app.goo.gl/dBPyKasfq8JksX2VA" target="_blank" class="btn-link">Get Directions <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+917791033133">+91 7791033133</a></p>
+                                <p class="text-muted">Mon-Sat, 10:00 AM - 9:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@vinayakvision.com">info@vinayakvision.com</a></p>
+                                <p class="text-muted">We reply within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Store Hours</h4>
+                                <p>Monday - Saturday: 10:00 AM - 9:00 PM</p>
+                                <p>Sunday: 11:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send a Message</h2>
+                    <form class="contact-form" id="contactForm" onsubmit="handleContactForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXXXXXXX" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="product">Product Question</option>
+                                <option value="appointment">Book Eye Test</option>
+                                <option value="return">Return / Exchange</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-section">
+                <h2><i class="fas fa-map-marker-alt"></i> Find Our Store</h2>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.7!2d72.98!3d26.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDE2JzEyLjAiTiA3MsKwNTgnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                        width="100%"
+                        height="450"
+                        style="border:0; border-radius: 16px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="map-overlay-link">
+                        <a href="https://maps.app.goo.gl/dBPyKasfq8JksX2VA" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 VinayakVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total"><span>Total:</span><span id="cartTotal">₹0</span></div>
+            <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </aside>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function handleContactForm(e) {
+            e.preventDefault();
+            showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

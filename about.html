@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - VinayakVision | Our Story</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-glasses"></i></span>
+                <span class="logo-text">Vinayak<span class="logo-accent">Vision</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="shop.html?cat=sunglasses"><i class="fas fa-sun"></i> Sunglasses</a>
+                        <a href="shop.html?cat=eyeglasses"><i class="fas fa-glasses"></i> Eyeglasses</a>
+                        <a href="shop.html?cat=computer"><i class="fas fa-desktop"></i> Computer Glasses</a>
+                        <a href="shop.html?cat=contact-lenses"><i class="fas fa-circle"></i> Contact Lenses</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="nav-btn cart-btn" aria-label="Cart" onclick="openCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge cart-count">0</span>
+                </button>
+                <button class="nav-btn mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About VinayakVision</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">Our Story</span>
+                    <h2>Crafting Vision Since Day One</h2>
+                    <p>VinayakVision was born from a simple belief — everyone deserves to see the world clearly and look great doing it. Based in the heart of Jodhpur, Rajasthan, we've grown from a small optical shop to a trusted destination for premium eyewear.</p>
+                    <p>We carry over 5,000 styles from 200+ brands, offering everything from everyday eyeglasses to luxury designer sunglasses, blue-light blocking computer glasses, precision contact lenses, and protective sports eyewear.</p>
+                    <p>Our in-house optometrists provide free eye tests, and our trained stylists help you find the frame that matches your face shape, personality, and lifestyle. Whether you visit our physical store or shop online — you get the same VinayakVision experience: premium quality at honest prices.</p>
+                </div>
+                <div class="about-visual">
+                    <div class="about-icon-display">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>Only genuine products from authorized distributors. No compromises on lenses or frames.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Trust & Transparency</h3>
+                    <p>Honest pricing, genuine warranties, and straightforward return policies.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Customer First</h3>
+                    <p>Every decision we make starts with: "Is this best for our customers?"</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>Constantly updating our collection with the latest trends and lens technologies.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="about-stats">
+                <div class="about-stat">
+                    <span class="about-stat-num">5000+</span>
+                    <span class="about-stat-label">Products</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-num">200+</span>
+                    <span class="about-stat-label">Brands</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-num">50000+</span>
+                    <span class="about-stat-label">Happy Customers</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-num">5+</span>
+                    <span class="about-stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 VinayakVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" onclick="closeCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total"><span>Total:</span><span id="cartTotal">₹0</span></div>
+            <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </aside>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
